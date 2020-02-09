@@ -24,9 +24,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center"
   },
-  table: {
-    width: "80%"
-  },
+  table: {},
   title: {
     margin: 30,
     display: "flex",
@@ -35,7 +33,8 @@ const useStyles = makeStyles(theme => ({
   linkShare: {
     display: "flex",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    flexWrap: "warp"
   }
 }));
 
@@ -94,7 +93,7 @@ export default props => {
 
   const classes = useStyles();
   useEffect(() => {
-    axios.get("https://api.n-cov.info/articles/100").then(res => {
+    axios.get("http://api.n-cov.info/articles/100").then(res => {
       console.log(res.data.data);
       setState(res.data.data);
       setIsLoading(false);

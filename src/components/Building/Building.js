@@ -47,7 +47,7 @@ export default props => {
   ]);
 
   useEffect(() => {
-    axios.get("https://api.n-cov.info/home").then(res => {
+    axios.get("http://api.n-cov.info/home").then(res => {
       console.log(res.data);
       setBuilding(res.data.data);
 
