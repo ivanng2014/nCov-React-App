@@ -93,7 +93,7 @@ export default props => {
 
   const classes = useStyles();
   useEffect(() => {
-    axios.get("http://api.n-cov.info/articles/100").then(res => {
+    axios.get("https://api.n-cov.info/articles/100").then(res => {
       console.log(res.data.data);
       setState(res.data.data);
       setIsLoading(false);

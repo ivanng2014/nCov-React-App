@@ -53,7 +53,7 @@ export default props => {
   const [yesterday, setYesterday] = useState({});
 
   useEffect(() => {
-    axios.get("http://api.n-cov.info/figure").then(res => {
+    axios.get("https://api.n-cov.info/figure").then(res => {
       let latestNumber = res.data.data.pop();
       let yesterdayNumber = res.data.data.pop(-2);
       setFigure(latestNumber);
