@@ -31,7 +31,9 @@ const useStyles = makeStyles(theme => ({
     minWidth: "100%"
   },
   infected: {
-    height: 100
+    height: 100,
+    display: "flex",
+    flexWrap: "wrap"
   },
   tableTitle: {
     padding: 15,
