@@ -6,7 +6,7 @@ export default props => {
   useEffect(() => {
     var ctx = document.getElementById("myChart").getContext("2d");
 
-    axios.get("/immigration").then(data => {
+    axios.get("https://api.n-cov.info/immigration").then(data => {
       const latest = data.data.data[0];
       var myChart = new Chart(ctx, {
         type: "bar",

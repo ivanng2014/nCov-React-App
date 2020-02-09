@@ -37,7 +37,7 @@ export default props => {
 
   const classes = useStyles();
   useEffect(() => {
-    axios.get("/case").then(res => {
+    axios.get("https://api.n-cov.info/case").then(res => {
       let data = _.orderBy(res.data.data, ["index"], ["desc"]);
       console.log(data);
       setCases(data);
