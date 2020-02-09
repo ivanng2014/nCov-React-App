@@ -43,22 +43,22 @@ export default () => {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/相關新聞">
+              <Route exact path="/news">
                 <News />
               </Route>
-              <Route exact path="/感染案例">
+              <Route exact path="/infected">
                 <Cases />
               </Route>
-              <Route exact path="/檢疫大廈">
+              <Route exact path="/building">
                 <Building />
               </Route>
-              <Route exact path="/數字統計">
+              <Route exact path="/stat">
                 <MessageUs />
               </Route>
-              <Route exact path="/關於我">
+              <Route exact path="/aboutme">
                 <About />
               </Route>
-              <Route exact path="/提供意見">
+              <Route exact path="/message">
                 <MessageUs />
               </Route>
             </Switch>

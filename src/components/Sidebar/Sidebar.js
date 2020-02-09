@@ -43,43 +43,45 @@ export default prop => {
           </ListItemIcon>
           <ListItemText primary="主頁" />
         </ListItem>
-
-        {["相關新聞", "感染案例", "檢疫大廈", "數字統計"].map((text, index) => {
-          return (
-            <ListItem button key={text} component="a" href={text}>
-              <ListItemIcon>
-                {index % 4 === 0 ? (
-                  <CollectionsIcon color="primary" />
-                ) : index % 4 === 1 ? (
-                  <LocalHospitalIcon color="primary" />
-                ) : index % 4 === 2 ? (
-                  <ApartmentIcon color="primary" />
-                ) : (
-                  <TimelineIcon color="primary" />
-                )}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          );
-        })}
+        <ListItem button key="相關新聞" component="a" href="/news">
+          <ListItemIcon>
+            <CollectionsIcon color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="相關新聞" />
+        </ListItem>
+        <ListItem button key="感染案例" component="a" href="/building">
+          <ListItemIcon>
+            <LocalHospitalIcon color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="感染案例" />
+        </ListItem>
+        <ListItem button key="檢疫大廈" component="a" href="/building">
+          <ListItemIcon>
+            <ApartmentIcon color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="檢疫大廈" />
+        </ListItem>
+        <ListItem button key="數字統計" component="a" href="/stat">
+          <ListItemIcon>
+            <TimelineIcon color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="數字統計" />
+        </ListItem>
       </List>
       <Divider />
-      {["提供意見", "關於我"].map((text, index) => {
-        return (
-          <ListItem button key={text} component="a" href={text}>
-            <ListItemIcon>
-              {index % 3 === 0 ? (
-                <InfoIcon color="primary" />
-              ) : index % 3 === 1 ? (
-                <MailIcon color="primary" />
-              ) : (
-                <CodeIcon color="primary" />
-              )}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        );
-      })}
+      <ListItem button key="提供意見" component="a" href="/message">
+        <ListItemIcon>
+          <MailIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="提供意見" />
+      </ListItem>
+      <ListItem button key="關於我" component="a" href="/aboutme">
+        <ListItemIcon>
+          <InfoIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="關於我" />
+      </ListItem>
+
       <ListItem
         button
         key="我想學寫Code"
