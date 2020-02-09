@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -22,10 +16,9 @@ import LineGraph from "../Chart/LineChartImmi";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%"
+    width: "96%"
   },
   title: {
-    margin: 30,
     display: "flex",
     justifyContent: "center"
   },
@@ -36,17 +29,18 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap"
   },
   tableTitle: {
-    padding: 15,
+    paddingTop: 15,
+    paddingBottom: 15,
     backgroundColor: "#DDDDDD"
   },
   Card: {
-    maxWidth: 100,
-    flex: 1,
-    padding: 10
+    maxWidth: "25%",
+    flex: 1
   },
   Bottom: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "space-around",
     alignItems: "stretch",
     wrap: "wrap"
   },
