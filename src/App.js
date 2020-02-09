@@ -40,7 +40,7 @@ export default () => {
         <Container className={classes.container} maxWidth="md">
           <Router>
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/home">
                 <Home />
               </Route>
               <Route exact path="/news">
