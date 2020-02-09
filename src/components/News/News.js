@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "warp"
+  },
+  pop: {
+    flex: 1
   }
 }));
 
@@ -73,18 +76,23 @@ export default props => {
         let url = rowData.url;
         return (
           <div className={classes.linkShare}>
-            <a href={url} rel="noopener noreferrer" target="_blank">
+            <a
+              href={url}
+              className={classes.pop}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <LinkIcon />
             </a>
-            <WhatsappShareButton url={url}>
+            <WhatsappShareButton lassName={classes.pop} url={url}>
               <WhatsAppIcon />
             </WhatsappShareButton>
 
-            <FacebookShareButton url={url}>
+            <FacebookShareButton lassName={classes.pop} url={url}>
               <FacebookIcon />
             </FacebookShareButton>
 
-            <TelegramShareButton url={url}>
+            <TelegramShareButton lassName={classes.pop} url={url}>
               <TelegramIcon />
             </TelegramShareButton>
           </div>
