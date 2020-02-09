@@ -24,7 +24,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center"
   },
-  table: {},
+  table: {
+    maxWidth: "80%"
+  },
   title: {
     margin: 30,
     display: "flex",
