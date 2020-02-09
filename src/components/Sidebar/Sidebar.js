@@ -49,7 +49,7 @@ export default prop => {
           </ListItemIcon>
           <ListItemText primary="相關新聞" />
         </ListItem>
-        <ListItem button key="感染案例" component="a" href="/building">
+        <ListItem button key="感染案例" component="a" href="/infected">
           <ListItemIcon>
             <LocalHospitalIcon color="primary" />
           </ListItemIcon>
