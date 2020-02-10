@@ -64,7 +64,19 @@ export default props => {
       </div>
 
       <MaterialTable
-        title={"高危地區"}
+        title={
+          <Typography
+            align="right"
+            color="textSecondary"
+            variant="body1"
+            component="body1"
+          >
+            資料來源：
+            <a href="https://data.gov.hk/tc-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent?fbclid=IwAR0hU-W9jhr7eWWWy1k1tSFJ6vq5Grp-p7rrkjEcyFSJTBdgyHidvmJAtO4">
+              資料一線通
+            </a>
+          </Typography>
+        }
         columns={columns}
         data={building}
         isLoading={isLoading}

@@ -77,7 +77,7 @@ export default props => {
             variant="h6"
             component="h6"
           >
-            武漢肺炎最新數字
+            武漢肺炎香港最新數字
           </Typography>
         </div>
         <div class={classes.Bottom}>
@@ -304,6 +304,19 @@ export default props => {
             </CardContent>
           </Card>
         </div>
+        <CardContent>
+          <Typography
+            align="right"
+            color="textSecondary"
+            variant="body1"
+            component="body1"
+          >
+            資料來源：
+            <a href="https://data.gov.hk/tc-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent?fbclid=IwAR0hU-W9jhr7eWWWy1k1tSFJ6vq5Grp-p7rrkjEcyFSJTBdgyHidvmJAtO4">
+              資料一線通
+            </a>
+          </Typography>
+        </CardContent>
       </Paper>
 
       <LineGraph />

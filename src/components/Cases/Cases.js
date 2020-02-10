@@ -51,6 +51,19 @@ export default props => {
           香港案例
         </Typography>
       </div>
+      <div className={classes.title}>
+        <Typography
+          align="right"
+          color="textSecondary"
+          variant="body1"
+          component="body1"
+        >
+          資料來源：
+          <a href="https://data.gov.hk/tc-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent?fbclid=IwAR0hU-W9jhr7eWWWy1k1tSFJ6vq5Grp-p7rrkjEcyFSJTBdgyHidvmJAtO4">
+            政府資料一線通
+          </a>
+        </Typography>
+      </div>
       <Grid
         className={classes.casesWrapper}
         container
