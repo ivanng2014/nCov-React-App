@@ -37,7 +37,7 @@ export default prop => {
       onKeyDown={prop.onKeyDown}
     >
       <List>
-        <ListItem button key="主頁" component="a" href="/home">
+        <ListItem button key="主頁" component="a" href="/">
           <ListItemIcon>
             <HomeIcon color="primary" />
           </ListItemIcon>

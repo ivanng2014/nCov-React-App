@@ -80,7 +80,7 @@ export default props => {
 
   return (
     <div>
-      <canvas id="myChart" height="400"></canvas>
+      <canvas id="myChart" height="250"></canvas>
     </div>
   );
 };
