@@ -37,9 +37,6 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "warp"
-  },
-  pop: {
-    flex: 1
   }
 }));
 
