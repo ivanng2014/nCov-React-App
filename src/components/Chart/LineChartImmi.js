@@ -34,35 +34,13 @@ export default props => {
                 "rgba(255, 99, 132, 1)"
               ],
               borderWidth: 1
-            },
-            {
-              label: "香港居民入境數字",
-              data: [
-                latest.data.機場.hkArrival,
-                latest.data.深圳灣.hkArrival,
-                latest.data.港珠澳大橋.hkArrival,
-                latest.data.總計.hkArrival
-              ],
-              backgroundColor: [
-                "rgba(255, 159, 64, 0.2)",
-                "rgba(255, 159, 64, 0.2)",
-                "rgba(255, 159, 64, 0.2)",
-                "rgba(255, 159, 64, 0.2)"
-              ],
-              borderColor: [
-                "rgba(255, 159, 64, 1)",
-                "rgba(255, 159, 64, 1)",
-                "rgba(255, 159, 64, 1)",
-                "rgba(255, 159, 64, 1)"
-              ],
-              borderWidth: 1
             }
           ]
         },
         options: {
           title: {
             display: true,
-            text: "入境處提供資訊"
+            text: "資料來源：香港入境處"
           },
           scales: {
             yAxes: [
