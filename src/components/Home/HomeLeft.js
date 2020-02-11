@@ -10,6 +10,7 @@ import Button from "@material-ui/core/Button";
 import { Alert, AlertTitle } from "@material-ui/lab";
 
 import axios from "axios";
+import PieChart from "../Chart/LineCaseBagel";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -82,6 +83,7 @@ export default props => {
           );
         })}
       </Card>
+      <PieChart />
     </div>
   );
 };
