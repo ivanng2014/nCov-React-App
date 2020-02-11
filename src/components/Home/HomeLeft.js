@@ -11,6 +11,7 @@ import { Alert, AlertTitle } from "@material-ui/lab";
 
 import axios from "axios";
 import PieChart from "../Chart/LineCaseBagel";
+import Mainlander from "../Widgets/Mainlander";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,7 +40,7 @@ export default props => {
       )
       .then(res => {
         let latestNews = res.data.data;
-        console.log(latestNews);
+
         setNews(latestNews);
       });
   }, []);
@@ -64,6 +65,7 @@ export default props => {
         </a>
         <br />
       </Alert>
+      <Mainlander />
       <Card className={classes.card} elevation={3}>
         <CardContent className={classes.cardTitle}>
           <Typography color="primary" variant="h5" component="h2">
