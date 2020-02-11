@@ -51,6 +51,12 @@ export default props => {
         <AlertTitle>網頁尚未完成</AlertTitle>
         網頁仍然有大量未完整的地方，仍然在努力中。
       </Alert>
+      <Alert severity="warning">
+        <AlertTitle>Oneshop Academy 招收學生中</AlertTitle>
+        如果你有興趣寫同 n-cov.info 同樣的 Web App，可以到 oneshop.academy
+        報讀工程師速成班。查詢連結：
+        <a href="https://www.facebook.com/oneshop.cloud/">這裡</a>
+      </Alert>
       <Alert severity="info">
         <AlertTitle>需要更多數據</AlertTitle>
         大家有什麼想要加入的數據，可以留言給我們反映。
