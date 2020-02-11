@@ -13,6 +13,7 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import axios from "axios";
 
 import LineGraph from "../Chart/LineChartImmi";
+import CaseGraph from "../Chart/LineCaseData";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -324,6 +325,7 @@ export default props => {
       </Paper>
 
       <LineGraph />
+      <CaseGraph />
     </div>
   );
 };
