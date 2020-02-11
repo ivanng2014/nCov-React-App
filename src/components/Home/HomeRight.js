@@ -58,12 +58,16 @@ export default props => {
   const [yesterday, setYesterday] = useState({});
 
   useEffect(() => {
-    axios.get("https://api.n-cov.info/figure").then(res => {
-      let latestNumber = res.data.data.pop();
-      let yesterdayNumber = res.data.data.pop(-2);
-      setFigure(latestNumber);
-      setYesterday(yesterdayNumber);
-    });
+    axios
+      .get(
+        "https://r3psfad7i6.execute-api.ap-southeast-1.amazonaws.com/Prod/figure"
+      )
+      .then(res => {
+        let latestNumber = res.data.data.pop();
+        let yesterdayNumber = res.data.data.pop(-2);
+        setFigure(latestNumber);
+        setYesterday(yesterdayNumber);
+      });
   }, []);
 
   return (

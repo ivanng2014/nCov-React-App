@@ -100,11 +100,15 @@ export default props => {
 
   const classes = useStyles();
   useEffect(() => {
-    axios.get("https://api.n-cov.info/articles/500").then(res => {
-      console.log(res.data.data);
-      setState(res.data.data);
-      setIsLoading(false);
-    });
+    axios
+      .get(
+        "https://r3psfad7i6.execute-api.ap-southeast-1.amazonaws.com/Prod/articles/500"
+      )
+      .then(res => {
+        console.log(res.data.data);
+        setState(res.data.data);
+        setIsLoading(false);
+      });
   }, []);
 
   return (

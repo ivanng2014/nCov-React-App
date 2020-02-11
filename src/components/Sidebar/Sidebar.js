@@ -55,11 +55,11 @@ export default prop => {
           </ListItemIcon>
           <ListItemText primary="感染案例" />
         </ListItem>
-        <ListItem button key="檢疫大廈" component="a" href="/building">
+        <ListItem button key="高危地區" component="a" href="/building">
           <ListItemIcon>
             <ApartmentIcon color="primary" />
           </ListItemIcon>
-          <ListItemText primary="檢疫大廈" />
+          <ListItemText primary="高危地區" />
         </ListItem>
         <ListItem button key="數字統計" component="a" href="/stat">
           <ListItemIcon>
@@ -69,7 +69,12 @@ export default prop => {
         </ListItem>
       </List>
       <Divider />
-      <ListItem button key="提供意見" component="a" href="/message">
+      <ListItem
+        button
+        key="提供意見"
+        component="a"
+        href="https://www.facebook.com/AnserBridge/"
+      >
         <ListItemIcon>
           <MailIcon color="primary" />
         </ListItemIcon>
@@ -86,7 +91,7 @@ export default prop => {
         button
         key="我想學寫Code"
         component="a"
-        href="https://oneshop.academy/"
+        href="https://oneshop.academy/courses/6ef2c7d1d434b898fc74412b636387ecc7d44c40"
         target="_blank"
       >
         <ListItemIcon>

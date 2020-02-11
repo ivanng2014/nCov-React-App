@@ -32,11 +32,15 @@ export default props => {
 
   const [news, setNews] = useState([]);
   useEffect(() => {
-    axios.get("https://api.n-cov.info/latestnews").then(res => {
-      let latestNews = res.data.data;
-      console.log(latestNews);
-      setNews(latestNews);
-    });
+    axios
+      .get(
+        "https://r3psfad7i6.execute-api.ap-southeast-1.amazonaws.com/Prod/latestnews"
+      )
+      .then(res => {
+        let latestNews = res.data.data;
+        console.log(latestNews);
+        setNews(latestNews);
+      });
   }, []);
 
   return (

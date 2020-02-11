@@ -29,6 +29,14 @@ const useStyles = makeStyles(theme => ({
   },
   casesWrapper: {
     marginTop: 40
+  },
+  Type: {
+    marginLeft: 25
+  },
+  status: {
+    marginTop: 4,
+    marginBottom: 4,
+    marginLeft: 30
   }
 }));
 
@@ -37,11 +45,15 @@ export default props => {
 
   const classes = useStyles();
   useEffect(() => {
-    axios.get("https://api.n-cov.info/case").then(res => {
-      let data = _.orderBy(res.data.data, ["index"], ["desc"]);
-      console.log(data);
-      setCases(data);
-    });
+    axios
+      .get(
+        "https://r3psfad7i6.execute-api.ap-southeast-1.amazonaws.com/Prod/case"
+      )
+      .then(res => {
+        let data = _.orderBy(res.data.data, ["index"], ["desc"]);
+        console.log(data);
+        setCases(data);
+      });
   }, []);
 
   return (
@@ -82,15 +94,37 @@ export default props => {
                       #{item.index} {item.hkResidents}
                     </Typography>
                   }
-                  action={<Chip label={item.status}></Chip>}
                 />
+                <Chip className={classes.Type} label={item.caseType}></Chip>
                 <CardActionArea>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h5">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h5"
+                      display="inline"
+                    >
                       {item.age} 歲 {item.gender}
                     </Typography>
+                    {item.status === "住院" ? (
+                      <Chip
+                        className={classes.status}
+                        label={item.status}
+                        color="primary"
+                      />
+                    ) : (
+                      <Chip
+                        className={classes.status}
+                        label={item.status}
+                        color="secondary"
+                      />
+                    )}
+
                     <Typography color="textSecondary">
-                      確診日期 : {item.reportDate}
+                      確診日期 : {item.comfirmDate}
+                    </Typography>
+                    <Typography color="textSecondary">
+                      確診日期 : {item.onSetDate}
                     </Typography>
                     <Typography
                       display="inline"
