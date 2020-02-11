@@ -51,10 +51,53 @@ export default props => {
   const [home, setHome] = useState([]);
   const [building, setBuilding] = useState([]);
 
-  const [columns, setColumns] = useState([]);
-
   const [value, setValue] = React.useState(0);
 
+  const columnsBuilding = [
+    { title: "地區", field: "district", defaultGroupOrder: 0 },
+    {
+      title: "地址",
+      field: "building",
+      render: rowData => {
+        let url = "http://maps.google.com/maps?q=" + rowData.building;
+        let buildingName = rowData.building;
+        return (
+          <a href={url}>
+            <h4>{buildingName}</h4>
+          </a>
+        );
+      }
+    },
+    {
+      title: "最後出現日期",
+      field: "lastDate"
+    },
+    {
+      title: "相關案例",
+      field: "relatedCase"
+    }
+  ];
+
+  const columnsHome = [
+    { title: "地區", field: "district", defaultGroupOrder: 0 },
+    {
+      title: "地址",
+      field: "building",
+      render: rowData => {
+        let url = "http://maps.google.com/maps?q=" + rowData.building;
+        let buildingName = rowData.building;
+        return (
+          <a href={url}>
+            <h4>{buildingName}</h4>
+          </a>
+        );
+      }
+    },
+    {
+      title: "最後檢疫日期",
+      field: "lastDayofHomeConfinees"
+    }
+  ];
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -73,26 +116,6 @@ export default props => {
       )
       .then(res => {
         setHome(res.data.data);
-        setColumns([
-          { title: "地區", field: "district", defaultGroupOrder: 0 },
-          {
-            title: "地址",
-            field: "building",
-            render: rowData => {
-              let url = "http://maps.google.com/maps?q=" + rowData.building;
-              let buildingName = rowData.building;
-              return (
-                <a href={url}>
-                  <h4>{buildingName}</h4>
-                </a>
-              );
-            }
-          },
-          {
-            title: "最後檢疫日期",
-            field: "lastDayofHomeConfinees"
-          }
-        ]);
         setIsLoading(false);
       });
   }, []);
@@ -105,30 +128,6 @@ export default props => {
       .then(res => {
         console.log(res.data);
         setBuilding(res.data.data);
-        setColumns([
-          { title: "地區", field: "district", defaultGroupOrder: 0 },
-          {
-            title: "地址",
-            field: "building",
-            render: rowData => {
-              let url = "http://maps.google.com/maps?q=" + rowData.building;
-              let buildingName = rowData.building;
-              return (
-                <a href={url}>
-                  <h4>{buildingName}</h4>
-                </a>
-              );
-            }
-          },
-          {
-            title: "最後出現日期",
-            field: "lastDate"
-          },
-          {
-            title: "相關案例",
-            field: "relatedCase"
-          }
-        ]);
         setIsLoading(false);
       });
   }, []);
@@ -157,7 +156,7 @@ export default props => {
 
       <TablePanel
         title="家居檢疫大廈一覽"
-        columns={columns}
+        columns={columnsHome}
         data={home}
         isLoading={isLoading}
         value={value}
@@ -165,7 +164,7 @@ export default props => {
       />
       <TablePanel
         title="患者曾出現地區"
-        columns={columns}
+        columns={columnsBuilding}
         data={building}
         isLoading={isLoading}
         value={value}

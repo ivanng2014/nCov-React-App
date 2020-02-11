@@ -53,6 +53,10 @@ export default props => {
           <br />
           如果有什麼想交流的話，請到{" "}
           <a href="https://www.facebook.com/AnserBridge/">這裡</a> PM 我。
+          <br />
+          <br />
+          另外，這個網站 <a href="https://oneshop.cloud/">oneshop.cloud</a>
+          承擔流量的，感謝公司提供的支持。
         </Typography>
       </Paper>
     </div>
