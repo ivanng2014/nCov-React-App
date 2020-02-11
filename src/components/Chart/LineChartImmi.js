@@ -27,15 +27,15 @@ export default props => {
                 ],
                 backgroundColor: [
                   "rgba(255, 99, 132, 0.2)",
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(255, 99, 132, 0.2)"
+                  "rgba(99, 255, 132, 0.2)",
+                  "rgba(255, 255, 132, 0.2)",
+                  "rgba(99, 132, 255, 0.2)"
                 ],
                 borderColor: [
                   "rgba(255, 99, 132, 1)",
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(255, 99, 132, 1)"
+                  "rgba(99, 255, 132, 1)",
+                  "rgba(255, 255, 132, 1)",
+                  "rgba(99, 132, 132, 1)"
                 ],
                 borderWidth: 1
               }
@@ -44,7 +44,10 @@ export default props => {
           options: {
             title: {
               display: true,
-              text: "資料來源：香港入境處"
+              text: [
+                "資料來源：香港入境處",
+                `更新時間:${data.data.data[0].dateString}`
+              ]
             },
             scales: {
               yAxes: [

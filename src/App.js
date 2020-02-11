@@ -12,6 +12,7 @@ import Cases from "./components/Cases/Cases";
 import Building from "./components/Building/Building";
 import MessageUs from "./components/MessageUs/MessageUs";
 import About from "./components/AboutMe/About";
+import Stat from "./components/Stat/Stat";
 
 const useStyles = makeStyles({
   container: {
@@ -53,7 +54,7 @@ export default () => {
                 <Building />
               </Route>
               <Route exact path="/stat">
-                <MessageUs />
+                <Stat />
               </Route>
               <Route exact path="/aboutme">
                 <About />

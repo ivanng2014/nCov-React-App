@@ -42,7 +42,10 @@ export default props => {
           options: {
             title: {
               display: true,
-              text: "資料來源：資料一線通"
+              text: [
+                "資料來源：資料一線通",
+                `更新時間: ${data.data.updateDate.split("T")[0]}`
+              ]
             },
             scales: {
               yAxes: [

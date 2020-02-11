@@ -12,7 +12,6 @@ export default props => {
       )
       .then(data => {
         const latest = data.data.data;
-        console.log(latest);
 
         let labels = [];
         let comfirmCase = [];
@@ -27,7 +26,6 @@ export default props => {
           investigation.push(item.investigation);
           ruleOut.push(item.ruleOut);
         });
-        console.log(comfirmCase);
 
         var caseChart = new Chart(ctx, {
           type: "line",
@@ -54,7 +52,10 @@ export default props => {
           options: {
             title: {
               display: true,
-              text: "資料來源：資料一線通"
+              text: [
+                "資料來源：資料一線通",
+                `更新時間: ${latest.pop().updateDate}`
+              ]
             },
             scales: {
               yAxes: [

@@ -61,12 +61,12 @@ export default prop => {
           </ListItemIcon>
           <ListItemText primary="高危地區" />
         </ListItem>
-        {/* <ListItem button key="數字統計" component="a" href="/stat">
+        <ListItem button key="數據圖表" component="a" href="/stat">
           <ListItemIcon>
             <TimelineIcon color="primary" />
           </ListItemIcon>
-          <ListItemText primary="數字統計" />
-        </ListItem> */}
+          <ListItemText primary="數據圖表" />
+        </ListItem>
       </List>
       <Divider />
       <ListItem
