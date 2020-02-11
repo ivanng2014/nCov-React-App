@@ -58,7 +58,11 @@ export default props => {
         <AlertTitle>開放 API </AlertTitle>
         資料庫的數據全部以 API 形式開放，亦歡迎大眾提供意見。
         <br />
-        API 網址： api.n-cov.info。 (P.S. 未寫 Doc :P)
+        API 網址： api.n-cov.info。
+        <a href="https://documenter.getpostman.com/view/1833220/SWTK4u2J">
+          說明書
+        </a>
+        <br />
       </Alert>
       <Card className={classes.card} elevation={3}>
         <CardContent className={classes.cardTitle}>

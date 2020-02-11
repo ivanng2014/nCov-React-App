@@ -20,9 +20,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     margin: "25px"
   },
-  card: {
-    maxWidth: 500
-  },
+  card: {},
   casesWrapper: {
     marginTop: 40
   },
@@ -51,7 +49,7 @@ export default props => {
         container
         justify="center"
         alignItems="center"
-        spacing={2}
+        spacing={3}
         wrap="wrap"
       >
         <Grid item key={1} style={{ minWidth: 300 }}>
