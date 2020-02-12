@@ -60,7 +60,7 @@ export default props => {
     <Container className={classes.root}>
       <div className={classes.title}>
         <Typography variant="h4" component="h4">
-          香港案例
+          香港武漢肺炎案例
         </Typography>
       </div>
       <div className={classes.title}>
@@ -135,7 +135,7 @@ export default props => {
                       入住醫院 :
                     </Typography>
                     <Typography
-                      color="textSecondary"
+                      color="Secondary"
                       variant="subtitle1"
                       display="inline"
                     >

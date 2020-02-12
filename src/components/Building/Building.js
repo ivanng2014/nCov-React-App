@@ -35,7 +35,7 @@ function TablePanel(props) {
         data={data}
         isLoading={isLoading}
         options={{
-          pageSize: 18,
+          pageSize: 10,
           actionsColumnIndex: -1,
           exportButton: true,
           grouping: true
