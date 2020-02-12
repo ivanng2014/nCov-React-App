@@ -9,18 +9,20 @@ import CardContent from "@material-ui/core/CardContent";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles(theme => ({
+  tableTitle: {
+    backgroundColor: "#DDDDDD"
+  },
+  warpper: {},
+  root: {
+    width: "100%",
+    marginTop: 15,
+    marginBottom: 15
+  }
+}));
 
 export default props => {
-  const classes = useStyles({
-    tableTitle: {
-      backgroundColor: "#DDDDDD"
-    },
-    warpper: {},
-    root: {
-      margin: 30
-    }
-  });
+  const classes = useStyles();
 
   const [mainlandArrival, setMainlandArrival] = useState(0);
 
@@ -31,7 +33,6 @@ export default props => {
       )
       .then(res => {
         let mainlander = 0;
-        console.log(res.data.data.slice(0, 14).length);
 
         res.data.data.slice(0, 14).map(item => {
           mainlander += item.data.機場.mainlandArrival;
@@ -47,9 +48,11 @@ export default props => {
           mainlander += item.data.中國客運碼頭.totalArrival;
           mainlander += item.data.港澳客輪碼頭.totalArrival;
           mainlander += item.data.屯門客運碼頭.totalArrival;
+          return true;
         });
 
         setMainlandArrival(mainlander);
+        return true;
       });
   }, []);
 

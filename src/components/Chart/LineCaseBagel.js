@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import Chart from "chart.js";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 
 export default props => {
   useEffect(() => {
@@ -23,6 +25,7 @@ export default props => {
           } else {
             mainland += 1;
           }
+          return true;
         });
 
         var caseChart = new Chart(ctx, {
@@ -58,12 +61,19 @@ export default props => {
             }
           }
         });
+        return caseChart;
       });
+    return true;
   }, []);
 
   return (
     <div>
-      <canvas id="pieChart" height="250"></canvas>
+      <Paper elevation={3} style={{ marginTop: 10 }}>
+        <Typography color="primary" align="center" variant="h6" component="h6">
+          患者居住地區統計
+        </Typography>
+        <canvas id="pieChart" height="250"></canvas>
+      </Paper>
     </div>
   );
 };

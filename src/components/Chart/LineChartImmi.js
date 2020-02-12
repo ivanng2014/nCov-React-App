@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import Chart from "chart.js";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 
 export default props => {
   useEffect(() => {
@@ -60,12 +62,18 @@ export default props => {
             }
           }
         });
+        return myChart;
       });
   }, []);
 
   return (
     <div>
-      <canvas id="myChart" height="250"></canvas>
+      <Paper elevation={3} style={{ marginTop: 10 }}>
+        <Typography color="primary" align="center" variant="h6" component="h6">
+          大陸人士入境資訊
+        </Typography>
+        <canvas id="myChart" height="250"></canvas>
+      </Paper>
     </div>
   );
 };
