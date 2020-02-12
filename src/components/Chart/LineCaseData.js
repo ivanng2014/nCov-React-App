@@ -19,14 +19,13 @@ export default props => {
         let comfirmCase = [];
         let fulfillReportingCriteria = [];
         let investigation = [];
-        let ruleOut = [];
 
         latest.map(item => {
           labels.push(item.updateDate);
           comfirmCase.push(item.comfirmCase);
           fulfillReportingCriteria.push(item.fulfillReportingCriteria);
           investigation.push(item.investigation);
-          ruleOut.push(item.ruleOut);
+
           return true;
         });
 
@@ -43,12 +42,7 @@ export default props => {
               {
                 label: "調查個案",
                 data: investigation,
-                backgroundColor: "rgba(99, 255, 132, 0.2)"
-              },
-              {
-                label: "排除個案",
-                data: ruleOut,
-                backgroundColor: "rgba(99, 132,255, 0.2)"
+                backgroundColor: "rgba(99, 255, 255, 0.2)"
               }
             ]
           },

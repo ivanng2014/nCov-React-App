@@ -8,9 +8,10 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Alert, AlertTitle } from "@material-ui/lab";
+import Link from "@material-ui/core/Link";
 
 import axios from "axios";
-import PieChart from "../Chart/LineCaseBagel";
+import PieChart from "../Chart/CaseBagel";
 import Mainlander from "../Widgets/Mainlander";
 
 const useStyles = makeStyles(theme => ({
@@ -48,14 +49,15 @@ export default props => {
   return (
     <div className={classes.root}>
       <Alert severity="error">
-        <AlertTitle>網頁尚未完成</AlertTitle>
-        網頁仍然有大量未完整的地方，仍然在努力中。
+        <AlertTitle>口罩緊張，切密亂買</AlertTitle>
+        市面上口罩供應仍然短缺，建議大家不要亂買。如果想知道多少個是安全範圍，可以參考：
+        <Link href="https://wars-mask.surge.sh/">口罩需求計算器</Link>
       </Alert>
       <Alert severity="warning">
         <AlertTitle>Oneshop Academy 招收學生中</AlertTitle>
         如果你有興趣寫同 n-cov.info 同樣的 Web App，可以到 oneshop.academy
-        報讀工程師速成班。查詢連結：
-        <a href="https://www.facebook.com/oneshop.cloud/">這裡</a>
+        報讀工程師速成班。
+        <Link href="https://www.facebook.com/oneshop.cloud/">查詢連結</Link>
       </Alert>
       <Alert severity="info">
         <AlertTitle>需要更多數據</AlertTitle>
@@ -66,9 +68,9 @@ export default props => {
         資料庫的數據全部以 API 形式開放，亦歡迎大眾提供意見。
         <br />
         API 網址： api.n-cov.info。
-        <a href="https://documenter.getpostman.com/view/1833220/SWTK4u2J">
+        <Link href="https://documenter.getpostman.com/view/1833220/SWTK4u2J">
           說明書
-        </a>
+        </Link>
         <br />
       </Alert>
       <Mainlander />

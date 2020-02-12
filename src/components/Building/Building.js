@@ -155,7 +155,7 @@ export default props => {
       </Paper>
 
       <TablePanel
-        title="家居檢疫大廈一覽"
+        title={""}
         columns={columnsHome}
         data={home}
         isLoading={isLoading}
@@ -163,7 +163,7 @@ export default props => {
         index={0}
       />
       <TablePanel
-        title="患者曾出現地區"
+        title={""}
         columns={columnsBuilding}
         data={building}
         isLoading={isLoading}

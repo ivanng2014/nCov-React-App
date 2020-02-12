@@ -14,6 +14,7 @@ import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import CollectionsIcon from "@material-ui/icons/Collections";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import CodeIcon from "@material-ui/icons/Code";
+import FunctionsIcon from "@material-ui/icons/Functions";
 
 import "./Sidebar.css";
 
@@ -98,6 +99,18 @@ export default prop => {
           <CodeIcon color="primary" />
         </ListItemIcon>
         <ListItemText primary="我想學寫Code" />
+      </ListItem>
+      <ListItem
+        button
+        key="口罩需求計算器"
+        component="a"
+        href="https://wars-mask.surge.sh/"
+        target="_blank"
+      >
+        <ListItemIcon>
+          <FunctionsIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="口罩需求計算器" />
       </ListItem>
     </div>
   );

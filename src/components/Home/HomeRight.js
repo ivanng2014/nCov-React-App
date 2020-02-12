@@ -109,7 +109,7 @@ export default props => {
               </Typography>
             </CardContent>
             <CardContent>
-              {figure.death - yesterday.death > 1 ? (
+              {figure.death - yesterday.death > 0 ? (
                 <Typography
                   align="center"
                   color="textPrimary"
@@ -163,7 +163,7 @@ export default props => {
               </Typography>
             </CardContent>
             <CardContent>
-              {figure.comfirmCase - yesterday.comfirmCase > 1 ? (
+              {figure.comfirmCase - yesterday.comfirmCase > 0 ? (
                 <Typography
                   align="center"
                   color="textPrimary"
@@ -219,7 +219,7 @@ export default props => {
             <CardContent>
               {figure.fulfillReportingCriteria -
                 yesterday.fulfillReportingCriteria >
-              1 ? (
+              0 ? (
                 <Typography
                   align="center"
                   color="textPrimary"
@@ -277,7 +277,7 @@ export default props => {
               </Typography>
             </CardContent>
             <CardContent>
-              {figure.ruleOut - yesterday.ruleOut > 1 ? (
+              {figure.ruleOut - yesterday.ruleOut > 0 ? (
                 <Typography
                   align="center"
                   color="textPrimary"

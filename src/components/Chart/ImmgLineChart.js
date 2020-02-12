@@ -18,10 +18,14 @@ export default props => {
 
         let label = [];
         let mainlandArrival = [];
+        let hkDeparture = [];
 
         latest.map(item => {
           label.push(item.dateString.replace(" ", ""));
           mainlandArrival.push(item.data.總計.mainlandArrival);
+          hkDeparture.push(
+            item.data.深圳灣.hkDepartue + item.data.港珠澳大橋.hkDepartue
+          );
           return true;
         });
 
@@ -31,9 +35,14 @@ export default props => {
             labels: label,
             datasets: [
               {
-                label: "大陸居民入境數字",
+                label: "大陸居民來港",
                 data: mainlandArrival,
                 backgroundColor: "rgba(99, 255, 132, 0.2)"
+              },
+              {
+                label: "香港居民出境大陸",
+                data: hkDeparture,
+                backgroundColor: "rgba(255, 99, 135, 0.2)"
               }
             ]
           },
@@ -69,7 +78,7 @@ export default props => {
     <div>
       <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
-          大陸居民入境數字
+          中港出入境數據（時序）
         </Typography>
         <canvas id="mainlandArrival" height="250"></canvas>
       </Paper>

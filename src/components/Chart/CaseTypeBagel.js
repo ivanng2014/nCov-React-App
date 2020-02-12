@@ -47,7 +47,7 @@ export default props => {
               ]
             },
             legend: {
-              display: false
+              display: true
             }
           }
         });
@@ -60,7 +60,7 @@ export default props => {
     <div>
       <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
-          感染者類型統計
+          感染類型統計
         </Typography>
         <canvas id="CaseTypepieChart" height="250"></canvas>
       </Paper>
