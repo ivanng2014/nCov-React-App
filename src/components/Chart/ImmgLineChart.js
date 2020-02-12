@@ -62,7 +62,7 @@ export default props => {
 
   return (
     <div>
-      <Paper elevation={3} style={{ marginTop: 10 }}>
+      <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
           大陸居民入境數字
         </Typography>

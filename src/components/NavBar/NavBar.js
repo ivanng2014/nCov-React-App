@@ -14,6 +14,8 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
+import Link from "@material-ui/core/Link";
+
 import {
   FacebookShareButton,
   TelegramShareButton,
@@ -78,7 +80,9 @@ export default prop => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            武漢肺炎實時資料庫
+            <Link href="/" color="inherit">
+              武漢肺炎實時資料庫
+            </Link>
           </Typography>
           <Button
             color="inherit"

@@ -150,7 +150,11 @@ export default props => {
                 </CardActionArea>
                 <div className={classes.linkShare}>
                   <WhatsappShareButton className={classes.pop} url={item.url}>
-                    <WhatsAppIcon className={classes.green} />
+                    <WhatsAppIcon
+                      className={classes.green}
+                      title={`${item.title +
+                        item.source} - Shared by n-cov.info`}
+                    />
                   </WhatsappShareButton>
 
                   <FacebookShareButton className={classes.pop} url={item.url}>

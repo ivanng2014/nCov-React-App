@@ -77,7 +77,7 @@ export default props => {
 
   return (
     <div>
-      <Paper elevation={3} style={{ marginTop: 10 }}>
+      <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
           香港武漢肺炎患者資料
         </Typography>

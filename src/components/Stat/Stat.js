@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
 
 import Container from "@material-ui/core/Container";
 
@@ -10,6 +9,7 @@ import LineCaseBagel from "../Chart/LineCaseBagel";
 import LineCaseData from "../Chart/LineCaseData";
 import LineChartImmi from "../Chart/LineChartImmi";
 import MainlandArrival from "../Chart/ImmgLineChart";
+import CaseType from "../Chart/CaseTypeBagel";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +20,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     margin: "25px"
   },
-  card: {},
+  card: {
+    padding: 10
+  },
   casesWrapper: {
     marginTop: 40
   },
@@ -49,28 +51,23 @@ export default props => {
         container
         justify="center"
         alignItems="center"
-        spacing={3}
+        spacing={2}
         wrap="wrap"
       >
         <Grid item key={1} style={{ minWidth: 300 }}>
-          <Paper className={classes.card}>
-            <LineCaseBagel />
-          </Paper>
+          <LineCaseBagel />
         </Grid>
         <Grid item key={2} style={{ minWidth: 300 }}>
-          <Paper className={classes.card}>
-            <LineCaseData />
-          </Paper>
+          <LineCaseData />
         </Grid>
         <Grid item key={3} style={{ minWidth: 300 }}>
-          <Paper className={classes.card}>
-            <LineChartImmi />
-          </Paper>
+          <CaseType />
         </Grid>
         <Grid item key={4} style={{ minWidth: 300 }}>
-          <Paper className={classes.card}>
-            <MainlandArrival />
-          </Paper>
+          <MainlandArrival />
+        </Grid>
+        <Grid item key={5} style={{ minWidth: 300 }}>
+          <LineChartImmi />
         </Grid>
       </Grid>
     </Container>

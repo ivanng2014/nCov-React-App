@@ -14,7 +14,6 @@ export default props => {
       )
       .then(data => {
         const latest = data.data.data;
-        console.log(latest);
 
         let local = 0;
         let mainland = 0;
@@ -50,14 +49,8 @@ export default props => {
                 `更新時間: ${data.data.updateDate.split("T")[0]}`
               ]
             },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true
-                  }
-                }
-              ]
+            legend: {
+              display: false
             }
           }
         });
@@ -68,7 +61,7 @@ export default props => {
 
   return (
     <div>
-      <Paper elevation={3} style={{ marginTop: 10 }}>
+      <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
           患者居住地區統計
         </Typography>
