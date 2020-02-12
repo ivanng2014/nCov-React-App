@@ -67,6 +67,11 @@ export default props => {
                     beginAtZero: true
                   }
                 }
+              ],
+              xAxes: [
+                {
+                  display: false
+                }
               ]
             }
           }
@@ -79,7 +84,7 @@ export default props => {
     <div>
       <Paper elevation={3} style={{ marginTop: 10, padding: 30 }}>
         <Typography color="primary" align="center" variant="h6" component="h6">
-          香港武漢肺炎患者資料
+          香港武漢肺炎患者數字
         </Typography>
         <canvas id="caseChart" height="250"></canvas>
       </Paper>

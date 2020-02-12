@@ -72,7 +72,7 @@ export default props => {
         >
           資料來源：
           <a href="https://data.gov.hk/tc-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent?fbclid=IwAR0hU-W9jhr7eWWWy1k1tSFJ6vq5Grp-p7rrkjEcyFSJTBdgyHidvmJAtO4">
-            政府資料一線通
+            資料一線通
           </a>
         </Typography>
       </div>

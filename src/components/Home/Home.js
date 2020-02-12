@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   homeWrapper: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "space-around",
     flexWrap: "wrap"
   },
   leftWrapper: {

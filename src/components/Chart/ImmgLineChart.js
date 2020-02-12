@@ -52,6 +52,11 @@ export default props => {
                     beginAtZero: true
                   }
                 }
+              ],
+              xAxes: [
+                {
+                  display: false
+                }
               ]
             }
           }

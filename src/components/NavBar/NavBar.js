@@ -28,6 +28,7 @@ import TelegramIcon from "@material-ui/icons/Telegram";
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: "101%",
     flexGrow: 1
   },
   menuButton: {
@@ -68,7 +69,7 @@ export default prop => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
           <IconButton
             edge="start"

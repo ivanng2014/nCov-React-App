@@ -15,7 +15,7 @@ import Mainlander from "../Widgets/Mainlander";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%"
+    width: "96%"
   },
   cardBottom: {
     display: "flex",
