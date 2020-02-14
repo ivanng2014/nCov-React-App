@@ -10,9 +10,10 @@ import News from "./components/News/News";
 import Home from "./components/Home/Home";
 import Cases from "./components/Cases/Cases";
 import Building from "./components/Building/Building";
-import MessageUs from "./components/MessageUs/MessageUs";
+
 import About from "./components/AboutMe/About";
 import Stat from "./components/Stat/Stat";
+import HongKongMap from "./components/Maps/HongKongMaps";
 
 const useStyles = makeStyles({
   container: {
@@ -59,8 +60,8 @@ export default () => {
               <Route exact path="/aboutme">
                 <About />
               </Route>
-              <Route exact path="/message">
-                <MessageUs />
+              <Route exact path="/map">
+                <HongKongMap />
               </Route>
             </Switch>
           </Router>

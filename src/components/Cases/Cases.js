@@ -124,7 +124,7 @@ export default props => {
                       確診日期 : {item.comfirmDate}
                     </Typography>
                     <Typography color="textSecondary">
-                      確診日期 : {item.onSetDate}
+                      病發日期 : {item.onSetDate}
                     </Typography>
                     <Typography
                       display="inline"
