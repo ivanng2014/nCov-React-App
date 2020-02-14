@@ -15,6 +15,7 @@ import axios from "axios";
 import LineGraph from "../Chart/LineChartImmi";
 import CaseGraph from "../Chart/LineCaseData";
 import MainlandArrival from "../Chart/ImmgLineChart";
+import PieChart from "../Chart/CaseBagel";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -324,7 +325,7 @@ export default props => {
           </Typography>
         </CardContent>
       </Paper>
-
+      <PieChart />
       <LineGraph />
       <CaseGraph />
       <MainlandArrival />

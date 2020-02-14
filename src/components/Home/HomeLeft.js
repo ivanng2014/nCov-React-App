@@ -11,7 +11,7 @@ import { Alert, AlertTitle } from "@material-ui/lab";
 import Link from "@material-ui/core/Link";
 
 import axios from "axios";
-import PieChart from "../Chart/CaseBagel";
+
 import Mainlander from "../Widgets/Mainlander";
 
 const useStyles = makeStyles(theme => ({
@@ -100,7 +100,6 @@ export default props => {
           );
         })}
       </Card>
-      <PieChart />
     </div>
   );
 };

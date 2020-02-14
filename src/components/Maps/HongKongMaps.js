@@ -49,21 +49,11 @@ export default props => {
   useEffect(() => {
     axios
       .get(
-        "https://r3psfad7i6.execute-api.ap-southeast-1.amazonaws.com/Prod/building"
+        "https://qs1v1ed9pd.execute-api.ap-southeast-1.amazonaws.com/default"
       )
       .then(res => {
         let buildings = res.data.data;
         console.log(buildings);
-        buildings.map(item => {
-          let dist = districts[item.district];
-          let i = {};
-          i[dist] = {
-            buildings: [],
-            count: 0
-          };
-          setLocation({ [dist]: i });
-        });
-        console.log(location);
       });
   }, []);
 
