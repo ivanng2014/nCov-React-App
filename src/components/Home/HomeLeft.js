@@ -84,6 +84,9 @@ export default props => {
           return (
             <div key={item._id}>
               <CardContent>
+                <Typography variant="h6" component="h6">
+                  {item.title}
+                </Typography>
                 <Typography variant="body1" component="body1">
                   {item.content}
                 </Typography>
