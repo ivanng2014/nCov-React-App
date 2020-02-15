@@ -15,6 +15,7 @@ import CollectionsIcon from "@material-ui/icons/Collections";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import CodeIcon from "@material-ui/icons/Code";
 import FunctionsIcon from "@material-ui/icons/Functions";
+import ContactsIcon from "@material-ui/icons/Contacts";
 
 import "./Sidebar.css";
 
@@ -80,6 +81,17 @@ export default prop => {
           <MailIcon color="primary" />
         </ListItemIcon>
         <ListItemText primary="提供意見" />
+      </ListItem>
+      <ListItem
+        button
+        key="提供意見"
+        component="a"
+        href="https://www.facebook.com/pisces.secret/"
+      >
+        <ListItemIcon>
+          <ContactsIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="聯絡口罩師" />
       </ListItem>
       <ListItem button key="關於我" component="a" href="/aboutme">
         <ListItemIcon>

@@ -57,7 +57,7 @@ export default props => {
   }, []);
 
   return (
-    <Container className={classes.root}>
+    <div className={classes.root}>
       <Paper elevation={3} className={classes.warpper}>
         <Card>
           <CardContent>
@@ -95,6 +95,6 @@ export default props => {
         </Card>
         <div></div>
       </Paper>
-    </Container>
+    </div>
   );
 };

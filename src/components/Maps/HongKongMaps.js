@@ -18,33 +18,47 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     margin: "25px"
+  },
+  safe: {
+    fill: "blue"
+  },
+
+  dangerous: {
+    fill: "lightblue"
+  },
+  heat2: {
+    fill: "orange"
+  },
+  heat3: {
+    fill: "red"
   }
 }));
 
 export default props => {
   let districts = {
-    九龍城區: "Kowloon City",
-    沙田: "Sha Tin",
-    東區: "Eastern",
-    南區: "Southern",
-    葵青: "Kwai Tsing",
-    中西區: "Central and Western",
-    油尖旺區: "Yau Tsim Mong",
-    灣仔: "Wan Chai",
-    屯門: "Tuen Mun",
-    黃大仙: "Wong Tai Sin",
-    北區: "North",
-    觀塘: "Kwun Tong",
-    西貢: "Sai Kung",
-    離島: "Island",
-    深水埗: "Sham Shui Po",
-    荃灣: "Tsuen Wan",
-    元朗: "Yuen Long",
-    大埔: "Tai Po"
+    "Kowloon City": "九龍城區",
+    "Sha Tin": "沙田",
+    Eastern: "東區",
+    Southern: "南區",
+    "Kwai Tsing": "葵青",
+    "Central and Western": "中西區",
+    "Yau Tsim Mong": "油尖旺區",
+    "Wan Chai": "灣仔",
+    "Tuen Mun": "屯門",
+    "Wong Tai Sin": "黃大仙",
+    North: "北區",
+    "Kwun Tong": "觀塘",
+    "Sai Kung": "西貢",
+    Island: "離島",
+    "Sham Shui Po": "深水埗",
+    "Tsuen Wan": "荃灣",
+    "Yuen Long": "元朗",
+    "Tai Po": "大埔"
   };
   let classes = useStyles();
   let [state, setState] = useState();
-  let [location, setLocation] = useState();
+  let [locationData, setLocationData] = useState({});
+  let [location, setPointedLocation] = useState();
 
   useEffect(() => {
     axios
@@ -53,13 +67,15 @@ export default props => {
       )
       .then(res => {
         let buildings = res.data.data;
-        console.log(buildings);
+        setLocationData(buildings);
       });
   }, []);
 
   const handleLocationMouseOver = event => {
     const pointedLocation = getLocationName(event);
     setState({ pointedLocation });
+    setPointedLocation(locationData[districts[pointedLocation]]);
+    console.log(location);
   };
 
   const handleLocationMouseOut = () => {
@@ -67,8 +83,24 @@ export default props => {
   };
 
   const getLocationClassName = (location, index) => {
-    // Generate random heat map
-    return `svg-map__location svg-map__location--heat${index % 4}`;
+    try {
+      let dist = districts[location.name];
+      let data = locationData[dist];
+
+      if (data !== undefined) {
+        if (data.countBuilding > 8) {
+          return "dangerous";
+        } else if (data.countBuilding > 4) {
+          return "middle";
+        } else {
+          return "safe";
+        }
+      } else {
+        return "none";
+      }
+    } catch {
+      return "safe";
+    }
   };
 
   let getLocationName = event => {
@@ -79,7 +111,7 @@ export default props => {
     <div className={classes.root}>
       <div className={classes.title}>
         <Typography variant="h4" component="h4">
-          地圖數據
+          過去 14 天患者曾出現地點
         </Typography>
       </div>
       <SVGMap
@@ -87,6 +119,7 @@ export default props => {
         locationClassName={getLocationClassName}
         onLocationMouseOver={handleLocationMouseOver}
         onLocationMouseOut={handleLocationMouseOut}
+        locationClassName={getLocationClassName}
       />
     </div>
   );

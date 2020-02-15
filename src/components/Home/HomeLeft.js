@@ -13,6 +13,7 @@ import Link from "@material-ui/core/Link";
 import axios from "axios";
 
 import Mainlander from "../Widgets/Mainlander";
+import MaskNews from "../Mask/MaskNews";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -73,7 +74,9 @@ export default props => {
         </Link>
         <br />
       </Alert>
+      <MaskNews />
       <Mainlander />
+
       <Card className={classes.card} elevation={3}>
         <CardContent className={classes.cardTitle}>
           <Typography color="primary" variant="h5" component="h2">
