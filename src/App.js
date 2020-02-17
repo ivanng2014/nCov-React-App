@@ -14,6 +14,7 @@ import Building from "./components/Building/Building";
 import About from "./components/AboutMe/About";
 import Stat from "./components/Stat/Stat";
 import HongKongMap from "./components/Maps/HongKongMaps";
+import Test from "./components/Test/Test";
 
 const useStyles = makeStyles({
   container: {
@@ -62,6 +63,9 @@ export default () => {
               </Route>
               <Route exact path="/map">
                 <HongKongMap />
+              </Route>
+              <Route exact path="/test">
+                <Test />
               </Route>
             </Switch>
           </Router>
