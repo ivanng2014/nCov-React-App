@@ -74,7 +74,7 @@ export default props => {
         </Link>
         <br />
       </Alert>
-      <MaskNews />
+
       <Mainlander />
 
       <Card className={classes.card} elevation={3}>
